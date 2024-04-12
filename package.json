@@ -1,0 +1,20 @@
+{
+  "name": "youssefyousry-resume",
+  "version": "1.0.0",
+  "description": "my resume website",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "keywords": [
+    "portfolio",
+    "resume",
+    "cv"
+  ],
+  "author": "Youssef Yousry Younis",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
