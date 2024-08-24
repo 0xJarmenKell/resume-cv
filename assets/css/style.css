@@ -23,11 +23,11 @@ body::before {
   z-index: -1;
 }
 
-@media (max-width: 980px) {
+/* @media (max-width: 980px) {
   body::before {
     background: #040404 url("../img/edited.jpg") center top no-repeat;
   }
-}
+} */
 
 @media (min-width: 1024px) {
   body::before {
