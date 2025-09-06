@@ -1,5 +1,3 @@
-
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -14,7 +12,8 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/wallpapersden.com_anonymous-4k_3840x2160.jpg") top left no-repeat;
+  background: #040404 url("../img/wallpapersden.com_anonymous-4k_3840x2160.jpg")
+    top left no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
@@ -215,7 +214,7 @@ h6 {
   position: relative;
 }
 
-.navbar li+li {
+.navbar li + li {
   margin-left: 30px;
 }
 
@@ -254,7 +253,7 @@ h6 {
 }
 
 .navbar a:hover:before,
-.navbar li:hover>a:before,
+.navbar li:hover > a:before,
 .navbar .active:before {
   visibility: visible;
   width: 25px;
@@ -263,16 +262,16 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover>a {
+.navbar li:hover > a {
   color: #fff;
 }
 
 .author-img {
   width: 100%;
-
 }
 
-.header-content, .header-image {
+.header-content,
+.header-image {
   flex: 1;
 }
 
@@ -344,7 +343,7 @@ h6 {
   padding: 12px 20px;
 }
 
-.navbar-mobile li+li {
+.navbar-mobile li + li {
   margin: 0;
 }
 
@@ -353,8 +352,6 @@ h6 {
   font-size: 16px;
   position: relative;
 }
-
-
 
 /*--------------------------------------------------------------
 # Sections General
@@ -987,7 +984,7 @@ section .container {
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li+li {
+.portfolio-details .portfolio-info ul li + li {
   margin-top: 10px;
 }
 
@@ -1084,7 +1081,7 @@ section .container {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
@@ -1117,7 +1114,8 @@ section .container {
 }
 
 .contact .php-email-form input,
-.contact .php-email-form textarea {
+.contact .php-email-form textarea,
+.contact .php-email-form select {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
@@ -1128,8 +1126,10 @@ section .container {
 }
 
 .contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
+.contact .php-email-form textarea:focus,
+.contact .php-email-form select:focus {
   background-color: rgba(255, 255, 255, 0.11);
+  outline: 1px solid #18d26e;
 }
 
 .contact .php-email-form input::-moz-placeholder,
@@ -1152,17 +1152,87 @@ section .container {
   padding: 12px 15px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form select {
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.contact .php-email-form select option {
+  background: #040404;
+  color: #fff;
+}
+
+.contact .php-email-form .form-label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.contact .php-email-form .char-counter {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+.contact .php-email-form .char-counter.text-warning {
+  color: #ffc107 !important;
+}
+
+.contact .php-email-form .field-error {
+  color: #ed3c0d;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.contact .php-email-form .is-invalid {
+  border: 1px solid #ed3c0d !important;
+  background-color: rgba(237, 60, 13, 0.1) !important;
+}
+
+.contact .php-email-form button[type="submit"],
+.contact .php-email-form .btn-send-message {
   background: #18d26e;
   border: 0;
-  padding: 10px 30px;
+  padding: 12px 35px;
   color: #fff;
   transition: 0.4s;
   border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover,
+.contact .php-email-form .btn-send-message:hover {
   background: #15bb62;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(24, 210, 110, 0.3);
+}
+
+.contact .php-email-form button[type="submit"]:disabled,
+.contact .php-email-form .btn-send-message:disabled {
+  background: #666;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.contact .php-email-form .loading {
+  background: rgba(24, 210, 110, 0.1);
+  border-left: 4px solid #18d26e;
+  color: #18d26e;
+}
+
+.contact .php-email-form .sent-message {
+  background: rgba(24, 210, 110, 0.1);
+  border-left: 4px solid #18d26e;
+  color: #18d26e;
 }
 
 @keyframes animate-loading {
